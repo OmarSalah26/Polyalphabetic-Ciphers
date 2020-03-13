@@ -11,7 +11,14 @@ namespace Polyalphabetic_Ciphers
         static void Main(string[] args)
         {
 
+
+            string name = "omar salah mohamed";
+            Console.Write("Real Name  : ");
+            Console.WriteLine(name);
+            //  to encrept 
+            Console.Write("Encrepted Name  : ");
             Console.WriteLine(Encrept_Polyalphabetic_Ciphers("omarsalahmohamed", "TOLASOLA"));
+           
 
         }
 
@@ -30,11 +37,13 @@ namespace Polyalphabetic_Ciphers
             _key = _key.ToLower();
             for (int i = 0; i < str.Length; i++)
             {
+
                 Result += alpha[(alpha.IndexOf(str[i]) + alpha.IndexOf(_key[i])) % 26];
             }
 
 
             return Result;
         }
+
     }
 }
